@@ -1,5 +1,6 @@
 import speech_recognition as sr
 from googletrans import Translator
+import codecs
 
 #######################################
 # 初期設定 -----------------------------
@@ -50,10 +51,10 @@ while True:
 
     if recog_text:
         # テキストファイルの作成 ------------------
-        out_file = open('out.txt', 'w')
+        out_file = codecs.open('out.txt', 'w', 'utf-8')
 
-        print(recog_text.encode('shiftjis'), file=out_file)
-        print(translatedText.encode('shiftjis'), file=out_file)
+        print(recog_text.decode('shiftjis'), file=out_file)
+        print(translatedText.decode('shiftjis'), file=out_file)
 
         # ファイルを閉じる ----------------
         out_file.close()
