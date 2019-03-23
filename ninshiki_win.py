@@ -53,8 +53,8 @@ while True:
         # テキストファイルの作成 ------------------
         out_file = codecs.open('out.txt', 'w', 'utf-8')
 
-        print(recog_text.decode('shiftjis'), file=out_file)
-        print(translatedText.decode('shiftjis'), file=out_file)
+        print(recog_text, file=out_file)
+        print(translatedText, file=out_file)
 
         # ファイルを閉じる ----------------
         out_file.close()
